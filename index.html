@@ -3,278 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IELTS English Tenses: Master Handbook & 100Q Mock Exam (B2 Level)</title>
-  <meta name="description" content="Complete IELTS Grammar Preparation Hub: In-depth Tense Explanations with 390+ Academic Examples and 100-Question MCQ Mock Exam with Band Estimator.">
-  <style>
-    :root {
-      --primary: #0b3c6d;
-      --primary-hover: #072a4d;
-      --primary-light: #e8f0fe;
-      --accent: #d32f2f;
-      --accent-teal: #00897b;
-      --bg-main: #f8fafc;
-      --bg-card: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --border-color: #e2e8f0;
-      --radius-lg: 18px;
-      --radius-md: 10px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-      --shadow-lg: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.05);
-      --font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-    }
-    [data-theme="dark"] {
-      --primary: #3b82f6;
-      --primary-hover: #60a5fa;
-      --primary-light: #1e293b;
-      --bg-main: #0b1120;
-      --bg-card: #1e293b;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border-color: #334155;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: var(--font-family);
-      background-color: var(--bg-main);
-      color: var(--text-main);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .header {
-      background-color: var(--bg-card);
-      border-bottom: 2px solid var(--border-color);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
-    .ielts-badge {
-      background: linear-gradient(135deg, #cc0000, #990000);
-      color: white;
-      font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      padding: 0.35rem 0.75rem;
-      border-radius: 6px;
-      text-transform: uppercase;
-    }
-    .brand h1 { font-size: 1.25rem; font-weight: 700; }
-    .theme-btn {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      padding: 0.45rem 0.9rem;
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.875rem;
-    }
-    .hero {
-      max-width: 1000px;
-      margin: 3rem auto 2rem;
-      text-align: center;
-      padding: 0 1.5rem;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 0.75rem;
-    }
-    [data-theme="dark"] .hero h2 { color: #60a5fa; }
-    .hero p {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .cards-grid {
-      max-width: 1100px;
-      margin: 1.5rem auto 3rem;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      width: 100%;
-    }
-    .card {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 2.25rem;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.25s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--primary);
-    }
-    .card-top { margin-bottom: 1.5rem; }
-    .card-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
-    .card-badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 0.25rem 0.65rem;
-      border-radius: 9999px;
-      background-color: var(--primary-light);
-      color: var(--primary);
-      margin-bottom: 0.75rem;
-    }
-    .card h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: var(--text-main);
-    }
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-    }
-    .feature-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      font-size: 0.88rem;
-      color: var(--text-main);
-    }
-    .feature-list li {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.85rem 1.5rem;
-      border-radius: var(--radius-md);
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      margin-top: 1.5rem;
-      text-align: center;
-    }
-    .btn-primary {
-      background-color: #0b3c6d;
-      color: white;
-    }
-    .btn-primary:hover {
-      background-color: #072a4d;
-    }
-    .btn-accent {
-      background-color: #00897b;
-      color: white;
-    }
-    .btn-accent:hover {
-      background-color: #00695c;
-    }
-    footer {
-      margin-top: auto;
-      text-align: center;
-      padding: 1.5rem;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border-color);
-      background-color: var(--bg-card);
-    }
-  </style>
+  <title>IELTS Tenses Master Handbook: Comprehensive B2 Guide & 390+ Academic Examples</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="In-depth B2-level IELTS grammar lessons covering all English tenses, formulas, examiner insights, common candidate traps, and 10+ IELTS Academic examples per usage.">
 </head>
 <body>
 
-  <header class="header">
-    <div class="brand">
-      <span class="ielts-badge">IELTS</span>
-      <h1>Grammar Mastery Portal</h1>
+  <!-- Top App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <span class="ielts-badge">IELTS</span>
+        <div class="brand-text">
+          <h1>Tenses Master Handbook</h1>
+          <span>B2 Academic Grammar • Formulas • Examiner Insights • 390+ Examples</span>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <div class="search-input-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Search tenses, rules, sentences..." aria-label="Search tenses and examples">
+        </div>
+
+        <a href="../IELTS%20Tenses%20Test/index.html" class="btn-primary" title="Launch the 100-question Mock Exam">
+          <span>📝</span> Launch 100Q Mock Test
+        </a>
+
+        <button id="themeToggleBtn" class="btn-icon" title="Toggle Dark/Light Mode">🌙 Dark</button>
+        <button id="printLessonBtn" class="btn-secondary" title="Print Current Lesson & Examples">🖨️ Print</button>
+      </div>
     </div>
-    <button id="themeToggleBtn" class="theme-btn">🌙 Dark</button>
   </header>
 
-  <section class="hero">
-    <h2>Master All English Tenses for IELTS</h2>
-    <p>Target Band 7.0+ in Grammatical Range & Accuracy with B2 CEFR lessons, 390+ authentic academic examples, and a 100-question timed mock exam.</p>
-  </section>
+  <!-- Main Layout -->
+  <main class="main-wrapper">
+    <!-- Left Column: Tense Navigation Sidebar -->
+    <aside class="sidebar-panel">
+      <nav id="tenseNavList" class="tense-nav-list" aria-label="Tense Selection Menu">
+        <!-- Dynamically rendered via app.js -->
+      </nav>
+    </aside>
 
-  <main class="cards-grid">
-    <!-- Card 1: Handbook -->
-    <article class="card">
-      <div class="card-top">
-        <div class="card-icon">📖</div>
-        <span class="card-badge">Lessons & Reference</span>
-        <h3>Tenses Master Handbook</h3>
-        <p>In-depth explanations of all 12 English tenses, active & passive formulas, examiner rubrics, and candidate traps.</p>
-        <ul class="feature-list">
-          <li>✅ 13 Structured Grammar Modules</li>
-          <li>✅ 39 Distinct Academic Usages</li>
-          <li>✅ 390+ IELTS Task 1, Task 2 & Speaking Examples</li>
-          <li>✅ Live Keyword Search & Filter Tools</li>
-        </ul>
-      </div>
-      <a href="IELTS%20Tenses%20Explanation/index.html" class="btn btn-primary">
-        Open Handbook Portal →
-      </a>
-    </article>
-
-    <!-- Card 2: 100Q Mock Exam -->
-    <article class="card">
-      <div class="card-top">
-        <div class="card-icon">📝</div>
-        <span class="card-badge">Examination & Practice</span>
-        <h3>100Q Tenses Mock Exam</h3>
-        <p>A full-length 100-question multiple-choice examination matching the B2 ESL benchmark with instant score estimation.</p>
-        <ul class="feature-list">
-          <li>✅ 100 Curated B2 Academic Questions</li>
-          <li>✅ Timed 60-min Exam & Instant Practice Modes</li>
-          <li>✅ IELTS Band Score Estimator (4.0 - 9.0)</li>
-          <li>✅ Detailed Rationale & Mistakes Review</li>
-        </ul>
-      </div>
-      <a href="IELTS%20Tenses%20Test/index.html" class="btn btn-accent">
-        Start 100Q Mock Exam →
-      </a>
-    </article>
+    <!-- Right Column: Interactive Lesson & Examples Area -->
+    <div id="contentArea" class="content-area">
+      <!-- Dynamically rendered via app.js -->
+    </div>
   </main>
 
-  <footer>
-    IELTS Grammar Preparation Suite • B2 CEFR Benchmark • Designed for Academic & General Training
-  </footer>
-
-  <script>
-    const themeBtn = document.getElementById("themeToggleBtn");
-    themeBtn.addEventListener("click", () => {
-      const isDark = document.body.getAttribute("data-theme") === "dark";
-      if (isDark) {
-        document.body.removeAttribute("data-theme");
-        themeBtn.textContent = "🌙 Dark";
-      } else {
-        document.body.setAttribute("data-theme", "dark");
-        themeBtn.textContent = "☀️ Light";
-      }
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="tensesData.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
