@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Grammar Mastery: 100-Question English Tenses Mock Exam (B2 Level)</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Comprehensive 100-question multiple-choice IELTS English tenses practice and mock exam covering B2 grammar, time markers, conditionals, and passive forms with in-depth explanations.">
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <span class="ielts-badge">IELTS</span>
+        <div class="brand-text">
+          <h1>Tenses Mastery Mock Exam</h1>
+          <span>B2 CEFR Benchmark • 100 Academic MCQ Questions</span>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <div id="timerBox" class="timer-box" title="Exam Timer">
+          <span>⏱️</span>
+          <span id="timerDisplay">60:00</span>
+        </div>
+
+        <select id="modeSelect" class="mode-toggle" title="Select Test Mode">
+          <option value="exam">📝 Exam Mode (Timed)</option>
+          <option value="practice">💡 Practice Mode (Instant Answers)</option>
+        </select>
+
+        <a href="../IELTS%20Tenses%20Explanation/index.html" class="btn-secondary" title="Review Tenses Handbook & Examples">
+          <span>📖</span> Handbook
+        </a>
+
+        <button id="themeToggleBtn" class="btn-icon" title="Toggle Dark/Light Mode">🌙 Dark</button>
+        <button id="printExamBtn" class="btn-secondary" title="Print Exam Paper & Key">🖨️ Print</button>
+        <button id="submitExamBtn" class="btn-primary" title="Submit your test">Finish & Submit</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="main-wrapper">
+    <!-- Left Column: Question Area & Navigation -->
+    <section class="test-panel">
+      <div class="question-card" id="questionCard">
+        <div class="question-meta">
+          <div class="badge-group">
+            <span class="category-tag" id="questionCategoryTag">Present Tenses</span>
+            <span class="tense-subtag" id="questionTenseTag">Present Simple vs Continuous</span>
+          </div>
+          <button id="flagBtn" class="flag-btn" type="button" title="Flag this question to review later">
+            <span>🏳️</span> Flag for Review
+          </button>
+        </div>
+
+        <div class="question-number-lead" id="questionNumberLead">Question 1 of 100</div>
+        <h2 class="question-text" id="questionText">Loading question content...</h2>
+
+        <div class="options-list" id="optionsContainer">
+          <!-- Dynamic Options Rendered via app.js -->
+        </div>
+
+        <div class="explanation-card" id="explanationContainer" style="display: none;">
+          <div class="explanation-header">
+            <span>💡</span> IELTS Grammar Insight & Explanation
+          </div>
+          <div id="explanationContent">
+            <!-- Dynamic Explanation Content -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Control Bar -->
+      <nav class="bottom-nav" aria-label="Question Navigation">
+        <div class="nav-actions-left">
+          <button id="prevBtn" class="btn-secondary" type="button">← Previous</button>
+          <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+        </div>
+        <div class="nav-actions-right">
+          <button id="clearAnswerBtn" class="btn-secondary" type="button">Clear Choice</button>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Right Column: Sidebar & Question Palette -->
+    <aside class="sidebar-panel">
+      <div class="navigator-card">
+        <div class="nav-header">
+          <h3>Question Palette</h3>
+          <select id="categoryFilterSelect" class="filter-select" title="Filter questions by section">
+            <option value="all">All Tense Sections</option>
+          </select>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item"><span class="legend-dot answered"></span> Answered</div>
+          <div class="legend-item"><span class="legend-dot unanswered"></span> Unanswered</div>
+          <div class="legend-item"><span class="legend-dot flagged"></span> Flagged</div>
+          <div class="legend-item"><span class="legend-dot current"></span> Current</div>
+        </div>
+
+        <div class="question-grid" id="questionGrid">
+          <!-- 100 Grid Buttons Rendered dynamically -->
+        </div>
+
+        <div class="progress-summary">
+          <div class="progress-text">
+            <span>Progress: <strong id="answeredCount">0</strong>/<span id="totalCount">100</span></span>
+            <span id="progressPercent">Answered</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progressBarFill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Score & Results Modal -->
+  <div id="resultsModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="score-banner">
+        <h2 id="modalTitle" style="font-size: 1.5rem; margin-bottom: 0.5rem;">IELTS Grammar Assessment Report</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.25rem;">100-Question English Tenses Mock Examination</p>
+
+        <div class="score-circle">
+          <span class="score-num" id="modalScoreNum">0/100</span>
+          <span class="score-label">Raw Score</span>
+        </div>
+
+        <div class="band-pill" id="modalBandPill">Estimated IELTS Band: 6.5</div>
+        <div class="score-evaluation" id="modalFeedback"></div>
+      </div>
+
+      <div class="category-breakdown">
+        <h4>Sectional Mastery Breakdown</h4>
+        <div id="modalBreakdown">
+          <!-- Dynamic Category Progress Bars -->
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button id="reviewAllBtn" class="btn-primary">Review All Questions</button>
+        <button id="reviewMistakesBtn" class="btn-danger">Review Mistakes Only</button>
+        <button id="retakeBtn" class="btn-secondary">Retake Test</button>
+        <button id="closeModalBtn" class="btn-accent">Close Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
